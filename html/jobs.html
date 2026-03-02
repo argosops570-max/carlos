@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>career link</title>
+    <link rel="stylesheet" href="../css/career.css">
+</head>
+<body>
+    <header>
+        <nav>
+    <div class="logo">
+        <h1>CAREER LINK</h1>
+        <p>linking talent and opportunity</p>
+      </div>
+
+      <!--navigation section-->
+      <div class="nav-links">
+      
+        <a href="career.html">Home</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="post-job.html">Post Job</a>
+        <a href="about.html">About</a>
+        <div class="search-btn">
+        <input type="text" id="job-search" placeholder="search jobs...">
+        <button id="search-btn">search</button>
+        </div>
+        <button class="login-btn" id="login-btn">login</button>
+        </div>
+      </nav>
+    </header>
+    </section>
+     <!--jobs section-->
+     <section id="jobs" class="jobs">
+        <h1>Available jobs</h1>
+        <div class="job-container" id="job-container">
+            <div class="job-card">
+                <h2>Web developer</h2>
+                <p>company:Tech solutions </p>
+                <p>location:Nairobi</p>
+                <button onclick="applyJob()">Apply</button>
+
+        </div>
+        <div class="job-card">
+            <h2>Graphic designer</h2>
+            <p>Company:Creative Studio</p>
+            <p>Location:Mombasa</p>
+            <button onclick="applyJob()">Apply</button>
+        </div>
+        <div class="job-card">
+            <h2>Data Entry clerk</h2>
+            <p>company:Smart Data Ltd</p>
+            <p>Location:Mombasa</p>
+            <button onclick="applyJob()">Apply</button>
+
+        </div>
+        <div class="job-card">
+            <h2>Security Guard</h2>
+            <p>company:diamond hub</p>
+            <p>Location:Nanyuki</p>
+            <button onclick="applyJob()">Apply</button>
+        </div>
+        
+     </section>
+      <div id="popup" class="popup">action completed!</div>
+       <script src="../javascript/career.js"></script>
+    <!--footer-->
+    <footer>
+      <p>&copy;2026 Career Link.All rights reserved</p>
+    </footer>
+</body>
+</html>

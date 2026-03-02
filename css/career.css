@@ -1,0 +1,444 @@
+body {
+  background-color: #0f172a;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding-top: 70px; /*space for fixed header*/
+  line-height: 1.6;
+  color: white;
+  animation: fadeIn 0.6s ease-in;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*header,navigation*/
+header {
+  width: 100%;
+
+  background-color: #0f172a;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+/*nav*/
+nav a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+nav a:hover {
+  color: #4da3ff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+nav-links li {
+  display: inline-block;
+  margin: 0 15px;
+  text-decoration: none;
+}
+nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  background-color: #0f2a2292;
+  padding: 6px 14px;
+}
+nav-links a:hover {
+  color: white;
+  text-decoration: none;
+  background-color: rgb(200, 255, 127);
+  padding: 6px 14px;
+}
+
+.login-btn {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  background-color: #4da3ff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.login-btn:hover {
+  background-color: #1f7ae0;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+nav ul li {
+  margin-left: 40px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.25;
+}
+/*hero section*/
+.hero {
+  padding: 80px 40px;
+  color: white;
+}
+.hero h1 {
+  font-size: 70px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 33px;
+  color: #ddd;
+}
+
+.hero-image img {
+  width: auto;
+  height: 350px;
+  max-width: 100%;
+  object-fit: contain;
+  box-shadow: 0 20px 40px rgba(77, 163, 255, 0.3);
+  border-radius: 8px;
+  animation: float 4s ease-in-out infinite;
+}
+.hero-text {
+  max-width: 600px;
+  flex: 1;
+  max-width: 100%;
+}
+.hero-text h1 {
+  font-size: 70px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.hero-text p {
+  font-size: 22px;
+  color: #ddd;
+  margin-bottom: 25px;
+}
+.hero-text .apply-btn {
+  background-color: white;
+  color: #0f172a;
+  font-weight: bold;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.hero-text .apply-btn:hover {
+  background-color: #4da3ff;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+/*hero image*/
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+}
+span {
+  background-color: rgb(0, 71, 71);
+  border-radius: 50%;
+  padding: 14px 24px;
+}
+/*jobs section*/
+
+.jobs {
+  padding: 60px 40px;
+  text-align: center;
+  color: white;
+}
+.job-container {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 30px;
+}
+.job-card {
+  background: #ddd;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  color: black;
+}
+.job-card button {
+  margin-top: 10px;
+  padding: 8px 14px;
+  border: none;
+  color: white;
+  background: #4da3ff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.job-card button:hover {
+  background: #0f172a;
+}
+@media (max-width: 600px) {
+  .job-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/*post job section*/
+.post-job {
+  padding: 60px 40px;
+  background-color: #0f172a;
+  text-align: center;
+  color: white;
+}
+.post-job h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #fff;
+}
+.post-job form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #1e293b;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+.post-job input,
+post-job textarea {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+.post-job textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.post-job input:focus,
+.post-job textarea:focus {
+  border: 2px solid #4da3ff;
+}
+.post-job apply-btn {
+  padding: 12px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4da3ff;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.post-job .apply-btn:hover {
+  background-color: #1f7ae0;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+/*about section*/
+.about-section {
+  padding: 60px 40px;
+  background-color: #0f172a;
+  color: white;
+  text-align: center;
+}
+.about-section h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.about-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+/*social links container*/
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+/*individual social links as a circle*/
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #1e293b;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+/*icon inside a circle*/
+.social-link img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+/*hover effect*/
+.social-link:hover {
+  background-color: #4da3ff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/*logo*/
+.logo h1 {
+  font-size: 26px;
+  margin: 0;
+  color: #ccc;
+  transition: 0.3s;
+}
+/*stacks logo neatly*/
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.logo h1:hover {
+  color: #7dd3fc;
+}
+/*footer*/
+footer {
+  background-color: #0f172a;
+  color: white;
+  padding: 30px 40px;
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+section {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4da3ff;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: 0.4s;
+}
+.popup.show {
+  opacity: 1;
+}
+#search {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-left: 10px;
+}
+.highlight {
+  border: 2px solid #00bfff;
+  box-shadow: 0 0 12px rgba(0, 191, 255, 0.7);
+  transform: scale(1.02);
+  transition: 0.3s;
+}
+.job-card .delete-btn {
+  margin-top: 10px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #ff4d4d;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.job-card .delete-btn:hover {
+  background-color: #e60000;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+/*✨ Job card hover effect */
+.job-card {
+  transition: all 0.3s ease;
+}
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/*✨ Buttons hover effect */
+.apply-btn,
+.delete-btn,
+.login-btn {
+  transition: all 0.3s ease;
+}
+.apply-btn:hover,
+.delete-btn:hover,
+.login-btn:hover {
+  background-color: #1f7ae0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/*Input focus glow (post-job & search) */
+input[type="text"],
+input[type="search"],
+textarea {
+  transition: all 0.3s ease;
+}
+input:focus,
+textarea:focus {
+  border: 2px solid #4da3ff;
+  box-shadow: 0 0 5px rgba(77, 163, 255, 0.5);
+  outline: none;
+}
+
+
