@@ -190,3 +190,37 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+// SMART SEARCH WITH PARTIAL MATCH & HIGHLIGHT
+document.addEventListener("DOMContentLoaded", function () {
+  const searchInput = document.getElementById("job-search");
+  if (!searchInput) return;
+
+  searchInput.addEventListener("keyup", function () {
+    const filter = searchInput.value.toLowerCase().trim();
+    const jobs = document.querySelectorAll(".job-card");
+    let matchCount = 0;
+
+    jobs.forEach(function (job) {
+      const text = job.textContent.toLowerCase();
+
+      // check if job includes typed text partially
+      if (filter && text.includes(filter)) {
+        job.style.display = "block";
+        job.style.border = "2px solid #4CAF50"; // highlight
+        job.style.backgroundColor = "#f0fff0";  // optional background
+        matchCount++;
+      } else {
+        job.style.display = filter ? "none" : "block"; // hide if no match
+        job.style.border = "";       // remove highlight
+        job.style.backgroundColor = "";
+      }
+    });
+
+    // show popup for feedback
+    if (filter && matchCount === 0) {
+      showPopup("No jobs available!");
+    } else if (filter && matchCount > 0) {
+      showPopup(matchCount + " job(s) match!");
+    }
+  });
+});
